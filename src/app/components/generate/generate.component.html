@@ -1,0 +1,37 @@
+<div class="containerr">
+    <div class="generate">
+        <h1>Generador</h1>
+        <p>{{ password }}</p>
+        <label for="range">{{ rangeValue }}</label>
+        <input type="range" id="range" min="1" max="30" [(ngModel)]="rangeValue" (input)="updateRange($event)">
+        <button (click)="copy()" style="color: black;">COPIAR</button>
+        <button (click)="save()" style="color: black;">GUARDAR</button>
+        <input style="color: black;" *ngIf="nameFieldVisible" [(ngModel)]="name" type="text"
+            placeholder="coloquele un nombre">
+        <div>
+            <label for="mayusculas">Mayusculas</label>
+            <input type="checkbox" id="mayusculas" (change)="toggleMayusculas($event)">
+            <label for="simbolos">Simbolos</label>
+            <input type="checkbox" id="simbolos" (change)="toggleSimbolos($event)">
+        </div>
+    </div>
+    <div class="generate">
+        <h1>Lista de contraseñas generadas</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>pass</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pass of passwords">
+                    <td>{{ pass.id }}</td>
+                    <td>{{ pass.name }}</td>
+                    <td>{{ pass.pass }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

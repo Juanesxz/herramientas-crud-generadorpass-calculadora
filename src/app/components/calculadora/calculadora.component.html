@@ -1,0 +1,34 @@
+<div class="calculadora">
+    <div class="display">
+        <h1 id="display">{{ displayValue }}</h1>
+    </div>
+    <div class="one">
+        <input type="button" value="AC" (click)="clear()">
+        <input type="button" value="+/-">
+        <input type="button" value="%" (click)="percentage()">
+        <input type="button" class="orange" value="÷" (click)="operation('/')">
+    </div>
+    <div class="two">
+        <input class="numero" type="button" value="7" (click)="appendToDisplay('7')">
+        <input class="numero" type="button" value="8" (click)="appendToDisplay('8')">
+        <input class="numero" type="button" value="9" (click)="appendToDisplay('9')">
+        <input type="button" class="orange" value="x" (click)="operation('*')">
+    </div>
+    <div class="three">
+        <input class="numero" type="button" value="4" (click)="appendToDisplay('4')">
+        <input class="numero" type="button" value="5" (click)="appendToDisplay('5')">
+        <input class="numero" type="button" value="6" (click)="appendToDisplay('6')">
+        <input type="button" class="orange" value="-" (click)="operation('-')">
+    </div>
+    <div class="four">
+        <input class="numero" type="button" value="1" (click)="appendToDisplay('1')">
+        <input class="numero" type="button" value="2" (click)="appendToDisplay('2')">
+        <input class="numero" type="button" value="3" (click)="appendToDisplay('3')">
+        <input type="button" class="orange" value="+" (click)="operation('+')">
+    </div>
+    <div class="five">
+        <input class="numero" type="button" value="0" (click)="appendToDisplay('0')">
+        <input class="numero" type="button" value="." (click)="appendToDisplay('.')">
+        <input type="button" class="orange" value="=" (click)="calculate()">
+    </div>
+</div>

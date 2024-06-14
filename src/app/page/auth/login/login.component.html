@@ -1,0 +1,22 @@
+<div class="containerr">
+    <div class="containerrlogin">
+        <form [formGroup]="formlogin" (ngSubmit)="login()" class="login">
+            <h1>Login</h1>
+            <div>
+                <label for="username">Usuario</label>
+                <input type="text" name="username" id="username" formControlName="username">
+            </div>
+            <div>
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" formControlName="pass">
+            </div>
+            <div>
+                <button type="submit">Iniciar sesión</button>
+            </div>
+            <div>
+                <a routerLink="/auth/register">Registrar</a>
+                <a routerLink="/">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

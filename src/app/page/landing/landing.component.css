@@ -1,0 +1,59 @@
+/* Contenedor principal */
+.containerr {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+nav ul {
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem; /* Espacio entre los elementos del menú */
+}
+nav ul li {
+  padding: 5px;
+  border: 1px solid #afaaaa;
+  border-radius: 4px;
+}
+
+nav ul li:hover {
+  background-color: #e2e2e2;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilos para el contenido principal */
+.content {
+  flex: 1 1 auto; /* Permite que el contenido crezca y se encoja según sea necesario */
+  background-color: #e9ecef;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el pie de página */
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  margin-top: auto; /* Empuja el pie de página hacia el final del contenedor */
+}
+
+.fondo {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
